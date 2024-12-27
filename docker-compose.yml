@@ -1,0 +1,21 @@
+
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend:/app
+    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
+  frontend:
+    image: nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./frontend/weather_control_app/build/web:/usr/share/nginx/html
+  mqtt:
+    image: eclipse-mosquitto
+    ports:
+      - '1883:1883'
+

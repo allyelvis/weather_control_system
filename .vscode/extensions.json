@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools-themes",
+        "expo.vscode-expo-tools",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.vscode-yaml"
+    ]
+}
